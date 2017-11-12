@@ -1,0 +1,118 @@
+a {
+  text-decoration: none;
+  color: #667878; }
+
+.App {
+  display: flex;
+  flex-direction: column; }
+
+.intro {
+  min-height: 100vh; }
+  .intro .title {
+    font-size: 8em;
+    width: 50px;
+    padding: 0;
+    line-height: .95em;
+    color: #262627;
+    margin: 0;
+    margin-left: 250px;
+    margin-top: 100px; }
+  .intro .subtitle {
+    font-size: 2em;
+    width: 500px;
+    color: #606060;
+    margin: 0;
+    margin-left: 250px;
+    margin-top: 30px;
+    /* margin: 0; */
+    padding: 0; }
+  .intro .text {
+    margin-left: 300px;
+    margin-top: 50px;
+    width: 450px;
+    letter-spacing: .3px;
+    line-height: 1.7em;
+    color: #262627;
+    border-left: 5px solid #769595;
+    padding-left: 25px; }
+
+.container {
+  position: relative;
+  width: 80%;
+  padding: 50px 10%;
+  min-height: 100vh; }
+  .container > .title {
+    font-size: 3em;
+    color: #262627;
+    margin-bottom: 80px; }
+
+.experience {
+  background-color: #fff; }
+  .experience .job {
+    width: 100%;
+    float: left;
+    margin-bottom: 56px; }
+    .experience .job .logo {
+      float: left;
+      margin-right: 40px;
+      width: 80px;
+      display: block; }
+    .experience .job .info {
+      float: left;
+      width: 600px; }
+      .experience .job .info > .title {
+        font-size: 1.5em;
+        margin: 0;
+        color: #262627; }
+      .experience .job .info .company {
+        margin: 10px 0;
+        font-weight: 500;
+        color: #26262d; }
+      .experience .job .info .place {
+        margin: 10px 0;
+        font-weight: 300;
+        color: #333;
+        font-size: .9em; }
+      .experience .job .info .description {
+        letter-spacing: .3px;
+        line-height: 1.7em;
+        color: #555555;
+        padding-left: 24px;
+        display: block;
+        padding: 0;
+        overflow: hidden;
+        font-size: 1em; }
+    .experience .job .projects {
+      border-left: 2px solid #eff4f4;
+      margin: 40px 0; }
+      .experience .job .projects .project-item {
+        border-bottom: 1px solid #f8f8f8;
+        padding: 24px 48px; }
+        .experience .job .projects .project-item:last-child {
+          border-bottom: none; }
+
+.skill-item {
+  width: 20%;
+  text-align: center;
+  float: left; }
+  .skill-item img {
+    width: 104px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0 auto;
+    position: relative;
+    display: block; }
+  .skill-item span {
+    position: relative;
+    display: block;
+    width: calc(100% - 48px);
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: #4e4e4e;
+    font-weight: 700;
+    margin: 0 auto;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); }
+  .skill-item:hover span {
+    opacity: 1;
+    top: 0; }
+  .skill-item:hover img {
+    filter: grayscale(50%); }

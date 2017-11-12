@@ -1,0 +1,23 @@
+{
+  "name": "inferno-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-inferno": "1.3.0-beta17",
+    "inferno": "beta42",
+    "inferno-component": "beta42",
+    "inferno-scripts": "0.9.x",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "inferno-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  }
+}

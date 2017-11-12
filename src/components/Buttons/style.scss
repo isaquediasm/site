@@ -1,0 +1,52 @@
+@import 'styles/variables.scss';
+
+button:focus {outline:0;}
+
+.button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: .45px;
+  font-size: .9em;
+  background: inherit;
+  border: none;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &-expand {
+    img {
+      width: 18px;
+      float: right;
+      margin-left: $spacer * 2;
+      transition: all .2s cubic-bezier(0.005, 0.625, 0.365, 0.0840);
+    }
+
+    &:hover {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+}
+/*
+.button-expand:after {
+    content: '';
+    background-image: url('assets/down-arrow.svg');
+    display: block;
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-left: $spacer * 2;
+  }
+
+  .button-expand:hover {
+      .button-expand:after {
+        opacity: .3;
+      }
+    }
+*/

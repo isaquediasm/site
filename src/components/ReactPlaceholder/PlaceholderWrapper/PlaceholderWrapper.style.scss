@@ -1,0 +1,56 @@
+$spacer: 8px;
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+     -moz-animation: $animation;
+          animation: $animation;
+}
+
+@include keyframes(placeHolderShimmer) {
+  0% {
+    background-position: - $spacer*75 0;
+  }
+  100% {
+    background-position: $spacer*75 0;
+  }
+}
+
+.placeholder-wrapper {
+  @include animation(placeHolderShimmer 1s linear infinite forwards);
+  background: linear-gradient(to right, #d2d2d2 8%, #ababab 18%, #d2d2d2 33%);
+  background-size: $spacer*150 $spacer*13;
+  height: 100%;
+  position: relative;
+}
+
+.placeholder-line {
+  height: $spacer*2 + $spacer/4;
+}
+
+.placeholder-offset {
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  height: inherit;
+}
+
+.placeholder-container {
+  height: inherit;
+}
+
+.feed {
+  .placeholder-wrapper {
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
