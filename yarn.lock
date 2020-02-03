@@ -3776,7 +3776,7 @@ node-pre-gyp@^0.6.29, node-pre-gyp@^0.6.36:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-sass-chokidar@^0.0.3:
+node-sass-chokidar@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/node-sass-chokidar/-/node-sass-chokidar-0.0.3.tgz#ba460efe41c8f14ce800aaa3606a7acbb1e630d1"
   dependencies:
